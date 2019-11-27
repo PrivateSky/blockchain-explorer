@@ -1,0 +1,141 @@
+{
+  "name": "psk-explorer-api",
+  "version": "0.1.0",
+  "description": "Explorer API for PrivateSky",
+  "engines": {
+    "npm": ">=3"
+  },
+  "main": "app.js",
+  "scripts": {
+    "preinstall": "node tools/nodeVersionCheck.js",
+    "test": "nyc mocha \"./{,!(node_modules)/**/}*.spec.js\" --timeout=30000",
+    "test:watch": "mocha \"./{,!(node_modules)/**/}*.spec.js\" --watch --timeout=30000",
+    "test:cover": "nyc --reporter=lcov --reporter=text mocha \"./{,!(node_modules)/**/}*.spec.js\" --timeout=30000",
+    "test:db-migrate-up": "db-migrate up --config .\\db-migrations\\database.json --migrations-dir .\\db-migrations --env test",
+    "start": "node app.js",
+    "dev": "nodemon app.js --ignore Logs --ignore Sessions",
+    "develop": "nodemon app.js --ignore Logs --ignore Sessions",
+    "db-migrate-up": "db-migrate up --config .\\db-migrations\\database.json --migrations-dir .\\db-migrations",
+    "db-migrate-down": "db-migrate down --config .\\db-migrations\\database.json --migrations-dir .\\db-migrations"
+  },
+  "author": "space-giant",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "8.2.2",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-http": "4.2.1",
+    "chai-passport-strategy": "1.0.1",
+    "eslint": "4.19.1",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-watch": "3.1.3",
+    "mocha": "5.2.0",
+    "nyc": "13.1.0",
+    "prettier": "1.14.0",
+    "proxyquire": "2.1.0",
+    "sinon": "7.2.2",
+    "sinon-chai": "3.3.0",
+    "sinon-express-mock": "2.1.0",
+    "solc": "0.4.23",
+    "why-is-node-running": "1.2.3"
+  },
+  "dependencies": {
+    "aws-sdk": "2.217.1",
+    "base64-img": "1.0.4",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "3.5.1",
+    "cookie-parser": "1.4.3",
+    "db-migrate": "0.10.5",
+    "db-migrate-mysql": "1.1.10",
+    "db-migrate-sqlite3": "0.3.1",
+    "dot-env": "0.0.1",
+    "express": "4.16.2",
+    "express-handlebars": "3.0.0",
+    "express-session": "1.15.6",
+    "glob": "7.1.2",
+    "helmet": "3.12.0",
+    "http-status-codes": "1.1.6",
+    "log4js": "2.5.3",
+    "mkdirp": "0.5.1",
+    "moment": "2.20.1",
+    "mysql2": "1.5.3",
+    "node-rest-client": "3.1.0",
+    "node-ses": "2.1.0",
+    "nodemailer": "4.6.3",
+    "nodemailer-express-handlebars": "3.0.0",
+    "passport": "0.4.0",
+    "passport-local": "1.0.0",
+    "qrcode": "1.3.2",
+    "queue": "4.4.2",
+    "readline-sync": "1.4.6",
+    "request-promise": "4.2.2",
+    "sanitize": "2.1.0",
+    "sequelize": "4.37.4",
+    "session-file-store": "1.2.0",
+    "socket.io": "2.2.0",
+    "speakeasy": "2.0.0",
+    "sqlite3": "4.0.3",
+    "uuid": "3.2.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "jquery": true,
+      "jest": true
+    },
+    "globals": {},
+    "settings": {},
+    "rules": {}
+  },
+  "nyc": {
+    "check-coverage": false,
+    "per-file": true,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80,
+    "include": [
+      "**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js",
+      "node_modules/**/*.*",
+      "coverage/**/*.*",
+      "db-migrations/**/*.*",
+      "misc-scripts/**/*.*",
+      "tools/**/*.*",
+      "test/**/*.*",
+      "testing/**/*.*"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "extension": [
+      ".jsx"
+    ],
+    "cache": true,
+    "all": true
+  }
+}

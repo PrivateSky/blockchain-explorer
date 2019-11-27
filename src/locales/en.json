@@ -1,0 +1,40 @@
+{
+  "validation.defaultErrorText": "This field is invalid!",
+  "validation.required": "This field is required!",
+  "validation.isEmail": "Please specify a valid email!",
+  "validation.isFloat": "Please specify a valid number!",
+  "validation.isPositive": "Please specify a valid number larger than 0!",
+  "validation.isMatch": "This field must match '{match}'!",
+
+  "errors.defaultError": "An error has occured while processing the request!",
+
+  "app.name": "PSK Explorer",
+
+  "header.defaultTitle": "PSK Explorer",
+
+  "home.title": "PSK Explorer",
+
+  "common.back": "Back",
+  "common.source": "Source",
+  "common.assets": "Assets",
+  "common.actions": "Actions",
+  "common.views": "View",
+  "common.name": "Name",
+  "common.value": "Value",
+  "common.asset": "Asset: ",
+  "common.tx": "Transactions",
+  "common.lastState": "View lastest state",
+
+  "currentVersion.title": "Current version",
+  "currentVersion.prefix": "Information from transaction: ",
+  "currentVersion.assstTypes": "Asset Types",
+
+  "transactionsLog.title": "Transactions log",
+  "transactionsLog.digest": "Transaction digest: ",
+  "transactionsLog.assetsTypesModified": "No. of assets types modified: ",
+  "transactionsLog.assetsModified": "No. of assets modified: ",
+  "transactionsLog.noData": "No transactions log available",
+  "transactionsLog.lastTx": "Last transaction: ",
+  "transactionsLog.txCount": "Transactions count: ",
+  "transactionsLog.nrPulses": "No. of pulses: "
+}

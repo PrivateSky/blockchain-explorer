@@ -1,0 +1,8 @@
+node_modules/
+.nyc_output
+logs
+public
+.env
+sessions
+data.db
+data-test.db
