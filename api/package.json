@@ -43,7 +43,7 @@
     "why-is-node-running": "1.2.3"
   },
   "dependencies": {
-    "aws-sdk": "2.217.1",
+    "aws-sdk": "2.814.0",
     "base64-img": "1.0.4",
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "3.5.1",
