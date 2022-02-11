@@ -53,7 +53,7 @@
     "db-migrate-sqlite3": "0.3.1",
     "dot-env": "0.0.1",
     "express": "4.16.2",
-    "express-handlebars": "3.0.0",
+    "express-handlebars": "5.3.1",
     "express-session": "1.15.6",
     "glob": "7.1.2",
     "helmet": "3.12.0",
