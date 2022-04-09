@@ -48,7 +48,7 @@
     "lodash.debounce": "4.0.8",
     "material-ui-flat-pagination": "3.2.0",
     "material-ui-pickers": "2.1.1",
-    "moment": "2.21.0",
+    "moment": "2.29.2",
     "object-assign": "4.1.1",
     "react": "16.3.2",
     "react-copy-to-clipboard": "5.0.1",
